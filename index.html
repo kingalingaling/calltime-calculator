@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calltime Calc</title>
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="body-wrapper container-fluid flex">
+    <h1 class="text-center">CALLTIME CALCULATOR</h1>
+    <section class="section-wrapper">
+        <main>
+            <div class="row">
+                <h4 class="text-center">Please Pick Your Network Provider</h2>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-sm-3" id="mtn">
+                    <p>MTN</p>
+                </div>
+                <div class="col-sm-3" id="glo">
+                    <p>Glo</p>
+                </div>
+                <div class="col-sm-3" id="airtel">
+                    <p>Airtel</p>
+                </div>
+                <div class="col-sm-3" id="9mobile">
+                    <p>9Mobile</p>
+                </div>
+            </div>
+        </main>
+
+        <aside class="aside-wrapper row">
+            <section class="col-md-6">
+                <form action="">
+                    <div class="form-outline mb-4 text-end">
+                        <input class="form-control" id="tariff" list="tariffs" placeholder="SELECT TARIFF PLAN">
+                        <datalist id="tariffs">
+                            <option value="yaj"></option>
+                        </datalist>
+                        <small class="pink-text">See how to check tariff *ICON*</small>
+                    </div>
+    
+                    <div class="form-outline mb-4">
+                        <label for="airtime" class="form-label labels">Enter Amount of Airtime</label>
+                        <input type="text" name="airtime" id="airtime" class="form-control" placeholder="0.00">
+                    </div>
+
+                    <div class="flex">
+                        <button class="btn btn-outline-danger details-btn">TARIFF DETAILS</button>
+                    </div>
+                </form>
+                
+
+            </section>
+            <section class="col-md-6"></section>
+        </aside>
+        
+    </section>
+
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>

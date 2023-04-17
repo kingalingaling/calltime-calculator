@@ -1,0 +1,50 @@
+/* @font-face {
+    font-family: 'inter';
+    src: url(font url); Better if font file present
+} */
+
+:root {
+    --bg-white: hsla(0,0%,96%,1);
+    --white: hsla(0,0%,100%,1);
+    --input-border: hsla(0, 0%, 80%, 1);
+    --pink: hsla(348, 100%, 68%, 1);
+    --light-pink: hsla(348, 100%, 68%, 1);
+    --dark-blue: hsla(224, 46%, 9%, 1);
+    --second-gradient: hsla(246, 79%, 76%, 1);
+    --shadow: hsla(224, 46%, 9%, 0.3);
+}
+
+* {
+    font-family: inter;
+}
+
+.body-wrapper {
+    background-image: url();
+    padding: 4.7% 20%;
+}
+
+.section-wrapper {
+    padding: 40px;
+    background-color: white;
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+}
+
+.aside-wrapper {
+    padding: 50px;
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+}
+
+.labels {
+    color: var(--input-border);
+}
+
+.pink-text {
+    color: var(--light-pink);
+}
+
+.details-btn {
+    width: 40%;
+    
+}
