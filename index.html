@@ -1,66 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calltime Calc</title>
 
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body class="body-wrapper container-fluid flex">
-    <h1 class="text-center">CALLTIME CALCULATOR</h1>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/webfonts/uicons-regular-rounded.css"
+    />
+  </head>
+  <body class="body-wrapper container-fluid flex">
+    <h1 id="head" class="text-center mb-3">Call Time Calculator</h1>
     <section class="section-wrapper">
-        <main>
-            <div class="row">
-                <h4 class="text-center">Please Pick Your Network Provider</h2>
+      <main>
+        <div class="row">
+          <h4 class="text-center">Please Pick Your Network Provider</h4>
+        </div>
+
+        <div class="row text-center my-3">
+          <div class="col p-0" id="mtn">
+            <img
+              class="selected-network mb-2 net-img"
+              src="./assets/Mtn.png"
+              alt=""
+            />
+            <p class="pink-text">MTN</p>
+          </div>
+          <div class="col p-0" id="glo">
+            <img class="mb-2 net-img" src="./assets/glo.png" alt="" />
+            <p>Glo</p>
+          </div>
+          <div class="col p-0" id="airtel">
+            <img class="mb-2 net-img" src="./assets/airtel.png" alt="" />
+            <p>Airtel</p>
+          </div>
+          <div class="col p-0" id="9mobile">
+            <img class="mb-2 net-img" src="./assets/9mobile.png" alt="" />
+            <p>9Mobile</p>
+          </div>
+        </div>
+      </main>
+
+      <aside class="aside-wrapper row">
+        <section class="col-lg-6 p-0">
+          <form action="">
+            <div class="form-outline mb-4 text-end">
+              <input
+                class="form-control"
+                id="tariff"
+                list="tariffs"
+                placeholder="SELECT TARIFF PLAN"
+              />
+              <datalist id="tariffs">
+                <option value="yaj"></option>
+              </datalist>
+              <small class="pink-text">See how to check tariff *ICON*</small>
             </div>
 
-            <div class="row text-center">
-                <div class="col-sm-3" id="mtn">
-                    <p>MTN</p>
-                </div>
-                <div class="col-sm-3" id="glo">
-                    <p>Glo</p>
-                </div>
-                <div class="col-sm-3" id="airtel">
-                    <p>Airtel</p>
-                </div>
-                <div class="col-sm-3" id="9mobile">
-                    <p>9Mobile</p>
-                </div>
+            <div class="form-outline mt-1 mb-5">
+              <label for="airtime" class="form-label labels"
+                >Enter Amount of Airtime</label
+              >
+              <input
+                type="text"
+                name="airtime"
+                id="airtime"
+                class="form-control"
+                placeholder="0.00"
+              />
             </div>
-        </main>
 
-        <aside class="aside-wrapper row">
-            <section class="col-md-6">
-                <form action="">
-                    <div class="form-outline mb-4 text-end">
-                        <input class="form-control" id="tariff" list="tariffs" placeholder="SELECT TARIFF PLAN">
-                        <datalist id="tariffs">
-                            <option value="yaj"></option>
-                        </datalist>
-                        <small class="pink-text">See how to check tariff *ICON*</small>
-                    </div>
-    
-                    <div class="form-outline mb-4">
-                        <label for="airtime" class="form-label labels">Enter Amount of Airtime</label>
-                        <input type="text" name="airtime" id="airtime" class="form-control" placeholder="0.00">
-                    </div>
+            <!-- <div class="row">
+              <div class="col-lg-5">
+                <button class="btn btn-outline-danger details-btn">
+                  TARIFF DETAILS
+                </button>
+              </div>
+              <div class="col-lg-5">
+                <button class="btn calc-btn">CALCULATE</button>
+              </div>
+            </div> -->
 
-                    <div class="flex">
-                        <button class="btn btn-outline-danger details-btn">TARIFF DETAILS</button>
-                    </div>
-                </form>
-                
-
-            </section>
-            <section class="col-md-6"></section>
-        </aside>
-        
+            <div class="d-flex flex-row justify-content-between mt-5">
+              <button class="btn btn-outline-danger details-btn">
+                TARIFF DETAILS
+              </button>
+              <button class="btn calc-btn">CALCULATE</button>
+            </div>
+          </form>
+        </section>
+        <div class="col-md-1"></div>
+        <section class="col-lg-5 bg-white text-center py-4 rounded" id="result-section">
+          <div class="d-flex flex-column w-100 p-2 align-items-center">
+            <div>Your Max. Call Time</div>
+            <div class="pt-3 pb-1">
+              <span class="display-5 font-weight-bold">00</span>
+              <span class="display-5 font-weight-bold">:00</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="mr-2">M</span>
+              <span class="ml-2">S</span>
+            </div>
+            <p class="mt-2 pink-text">CHECKOUT HOW IT WORKS <span class="fi fi-rr-angle-double-small-right"></span></p>
+          </div>
+          <!-- <div class="row w-100 h-100">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 text-center">
+              <p>Your Max. Call Time</p>
+              <div class="row">
+                <div class="display-4 w-100 text-center">
+                  <span>00</span>
+                  :
+                  <span>00</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p>CHECKOUT IT WORKS <span class="fi fi-rr-angle-double-small-right"></span></p>
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+          </div> -->
+        </section>
+      </aside>
     </section>
 
     <script src="scripts/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
